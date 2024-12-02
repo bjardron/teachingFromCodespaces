@@ -1,0 +1,86 @@
+/* Apply to entire page */
+body {
+    font-family: Arial, sans-serif;  /* Use clean, readable font */
+    margin: 0;                       /* Remove default margins */
+    padding: 20px;                   /* Add space around content */
+    background-color: #f0f2f5;       /* Light gray background */
+}
+
+/* Main content container */
+.container {
+    max-width: 800px;               /* Limit width for readability */
+    margin: 0 auto;                 /* Center on page */
+    background-color: white;        /* White background */
+    padding: 20px;                  /* Space inside container */
+    border-radius: 8px;            /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* Main heading style */
+h1 {
+    color: #1a73e8;               /* Google-style blue */
+    margin-bottom: 20px;          /* Space below heading */
+}
+
+/* Form layout */
+form {
+    display: flex;                /* Arrange items in a row */
+    gap: 10px;                   /* Space between form items */
+    margin-bottom: 20px;         /* Space below form */
+}
+
+/* Style for all input fields */
+input {
+    padding: 8px;                /* Space inside inputs */
+    border: 1px solid #ddd;      /* Light border */
+    border-radius: 4px;          /* Rounded corners */
+    font-size: 14px;            /* Readable text size */
+}
+
+/* Style for buttons */
+button {
+    padding: 8px 16px;           /* Space inside button */
+    background-color: #1a73e8;   /* Blue background */
+    color: white;                /* White text */
+    border: none;                /* Remove default border */
+    border-radius: 4px;          /* Rounded corners */
+    cursor: pointer;             /* Hand cursor on hover */
+    font-size: 14px;            /* Match input text size */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #1557b0;   /* Darker blue on hover */
+}
+
+/* Table styling */
+table {
+    width: 100%;                 /* Full width of container */
+    border-collapse: collapse;   /* Remove space between cells */
+    margin-top: 20px;           /* Space above table */
+}
+
+/* Table cell styling */
+th, td {
+    padding: 12px;              /* Space inside cells */
+    text-align: left;           /* Align text left */
+    border-bottom: 1px solid #ddd;  /* Line between rows */
+}
+
+/* Table header styling */
+th {
+    background-color: #1a73e8;  /* Blue background */
+    color: white;               /* White text */
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f5f5f5;  /* Light gray on hover */
+}
+
+/* Average display styling */
+.average {
+    margin-top: 20px;           /* Space above average */
+    font-weight: bold;          /* Make text bold */
+    color: #1a73e8;            /* Blue text */
+}
