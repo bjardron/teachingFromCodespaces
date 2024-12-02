@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Page title shown in browser tab -->
+    <title>Student Grade Tracker</title>
+    
+    <!-- Link to our CSS file -->
+    <!-- url_for is a Flask function that finds static files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Main container for all content -->
+    <div class="container">
+        <!-- Page heading -->
+        <h1>Student Grade Tracker</h1>
+        
+        <!-- Form for submitting new grades -->
+        <!-- method="POST" sends data to our Flask app -->
+        <form method="POST">
+            <!-- Input field for student name -->
+            <!-- required means it can't be empty -->
+            <input type="text" name="name" placeholder="Student Name" required>
+            
+            <!-- Input field for grade -->
+            <!-- type="number" only allows numbers -->
+            <!-- min/max set allowed grade range -->
+            <input type="number" name="grade" placeholder="Grade" min="0" max="100" required>
+            
+            <!-- Submit button for the form -->
+            <button type="submit">Add Grade</button>
+        </form>
+
+        <!-- Section for displaying grades -->
+        <div class="grades">
+            <h2>Grades</h2>
+            
+            <!-- Check if we have any students -->
+            {% if students %}
+                <!-- Table to display grades -->
+                <table>
+                    <!-- Table header row -->
+                    <tr>
+                        <th>Name</th>
+                        <th>Grade</th>
+                    </tr>
+                    
+                    <!-- Loop through each student -->
+                    {% for student in students %}
+                    <tr>
+                        <!-- Display student name and grade -->
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.grade }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                
+                <!-- Show class average -->
+                <!-- |round(2) formats to 2 decimal places -->
+                <p class="average">Class Average: {{ average|round(2) }}</p>
+            {% else %}
+                <!-- Message when no grades exist -->
+                <p>No grades yet!</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
